@@ -2,24 +2,21 @@
 let calcElem = document.querySelector("#calc-content");
 let screen = document.querySelector("#calc-screen");
 
-
-
 function calculatrice(event) {
     let btn = event.target.value
-    if (event.target.tagName === "button") {
-        if (btn.value === 'AC') {
+    if (event.target.tagName === "BUTTON") {
+        if (btn === 'AC') {
             screen.textContent = "";
-        } else if (btn.value !== '=') {
+            console.log(btn);
+        } else if (btn !== '=') {
             screen.textContent += btn;
         } else {
-            screen.textContent += btn
+            let calcul = eval(screen.textContent);
+            screen.textContent = calcul;            
         }
     } else {
         return false;
     }
 }
-
-function calcul() {}
-
 
 calcElem.addEventListener("click", calculatrice);

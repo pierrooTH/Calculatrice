@@ -9,13 +9,15 @@ body {
     max-width: 100vw;
     background-color: lightskyblue;
     position: relative;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 .calculator {
     width: 400px;
-    height: 500px;
+    height: 570px;
     background-color: white;
-    border: 1px solid lightgray;
+    border: 3px solid lightgray;
     border-radius: 5px;
     position: absolute;
     top: 50%; left: 50%;
@@ -31,21 +33,46 @@ body {
     justify-content: flex-end;
     align-items: flex-end;
     padding: 5px;
-    font-size: 1.5rem;
     color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    border-radius: 3px;
 }
 
-
-.calculator__content {
-
+.calculator__grid--sym {
     display: grid;
     grid-template-columns: repeat(4, 90px);
-    grid-template-rows: repeat(5,80px);
+    grid-template-rows: repeat(1, 90px);
     justify-content: center;
-
+}
+.calculator__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: repeat(4, 90px);
+    justify-content: center;
+}
+.calculator__grid--egal {
+    display: grid;
+    grid-row: span 4;
 }
 .btn {
     margin: 10px;
     background-color: white;
-    border: 1px solid lightgray;
+    border: 2px solid lightgray;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+}
+
+.btn--highlighted {
+    color: rgb(36, 167, 248);
+}
+.btn--suppr {
+    background-color: rgb(255, 121, 121);
+    color: white;
+}
+.btn--egal {
+    background-color: rgb(36, 167, 248);
+    color: white;
+
 }
