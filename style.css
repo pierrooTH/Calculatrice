@@ -70,10 +70,12 @@ body {
 }
 .btn--suppr {
     background-color: rgb(255, 121, 121);
+    border: 2px solid rgb(255, 121, 121);
     color: white;
 }
 .btn--egal {
     background-color: rgb(36, 167, 248);
+    border: 2px solid rgb(36, 167, 248);
     color: white;
 
 }
