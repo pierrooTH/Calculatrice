@@ -7,16 +7,14 @@ function calculatrice(event) {
     if (event.target.tagName === "BUTTON") {
         if (btn === 'AC') {
             screen.textContent = "";
-            console.log(btn);
         } else if (btn !== '=') {
             screen.textContent += btn;
-        } else {
+        }
+        else {
             let calcul = eval(screen.textContent);
             screen.textContent = calcul;            
         }
-    } else {
-        return false;
-    }
+    } 
 }
 
 calcElem.addEventListener("click", calculatrice);
